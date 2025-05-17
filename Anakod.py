@@ -27,64 +27,7 @@ class ExamSystemApp(QMainWindow):
         # Soru verileri
         self.questions = []
         
-        # Stilleri ayarla
-        self.set_styles()
-    
-    def set_styles(self):
-        self.setStyleSheet("""
-            QMainWindow {
-                background-color: #f5f5f5;
-            }
-            QTabWidget::pane {
-                border: 1px solid #ccc;
-                background: white;
-            }
-            QTabBar::tab {
-                background: #e0e0e0;
-                padding: 8px;
-                border: 1px solid #ccc;
-                border-bottom: none;
-                border-top-left-radius: 4px;
-                border-top-right-radius: 4px;
-            }
-            QTabBar::tab:selected {
-                background: white;
-                margin-bottom: -1px;
-            }
-            QPushButton {
-                background-color: #4CAF50;
-                color: white;
-                border: none;
-                padding: 8px 16px;
-                border-radius: 4px;
-            }
-            QPushButton:hover {
-                background-color: #45a049;
-            }
-            QPushButton#export_btn {
-                background-color: #2196F3;
-            }
-            QPushButton#export_btn:hover {
-                background-color: #0b7dda;
-            }
-            QPushButton#print_btn {
-                background-color: #ff9800;
-            }
-            QPushButton#print_btn:hover {
-                background-color: #e68a00;
-            }
-            QGroupBox {
-                border: 1px solid #ddd;
-                border-radius: 4px;
-                margin-top: 10px;
-                padding-top: 15px;
-            }
-            QGroupBox::title {
-                subcontrol-origin: margin;
-                left: 10px;
-                padding: 0 3px;
-            }
-        """)
+       
     
     def create_tabs(self):
         self.tabs = QTabWidget()
@@ -96,8 +39,7 @@ class ExamSystemApp(QMainWindow):
         # Sınav Oluşturma Sekmesi
         self.create_exam_tab()
         
-        # İstatistikler Sekmesi
-        self.create_stats_tab()
+       
     
     def create_question_tab(self):
         tab = QWidget()
